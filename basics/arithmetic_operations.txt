@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func main(){
+	var a,b int=15,10
+	var result int;
+	result=a+b
+
+	fmt.Println("Addition : ",result)
+
+	result=a-b
+	fmt.Println("Subtraction : ",result)
+	result =a*b
+	fmt.Println("Multiplication : ",result)
+	result=a/b
+	fmt.Println("Division : ",result)
+	result=a%b
+	fmt.Println("Remainder : ",result)
+	x:=2
+	y:=2.2
+	// fmt.Println(x+y)
+}
