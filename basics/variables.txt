@@ -1,0 +1,28 @@
+package main
+
+import "fmt"
+
+var Name string= "Zain" 
+// identifiers starting with capital letter are exported and  must be outside func means on package level like this Name. capital letter inside func does nothing
+
+func main(){
+
+	Name3:="Bazel"  //not exported as it is in func and not on package level
+
+name2:="Ali" // short declaration cant be used outside functions
+	fmt.Println(name2,Name3)
+	printName()
+
+
+
+	// declaring multiple var at same time
+	// var (
+	// 	school string="LFGS"
+	// 	area ="MH"
+	// )
+}
+
+func printName(){
+	fmt.Println(Name)
+}
+

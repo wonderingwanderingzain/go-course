@@ -1,0 +1,18 @@
+package main
+
+const Pi=3.14; //exported
+
+const name="zain" //not exported
+
+func main(){
+
+	const (
+		area=500
+		radius=200
+		lastName="Ayaz"
+	) //block const declaration.....declaring mutliple constants together
+
+	const firstName string="Zain" //typed const else are untyped.....read why they exist later
+
+
+}

@@ -1,0 +1,35 @@
+package main
+
+// use small letters to name packages and short & understandable words...... no camel case or _
+
+//var Name string= "Zain"
+// identifiers starting with capital letter are exported and visible to same package and  must be outside func means on package level like this Name. capital letter inside func does nothing
+
+// type Employee struct{
+// 	FirstName string
+// 	LastName  string
+// 	age       int
+// }
+
+// Employee is exported across packages and can be imported by other packages.
+// its fields FirstName and LastName do too but not age as it starts with small letter.
+// each field and method inside struct or interface needs to be exported seperately
+// if struct or interface itself is not exported then its exported fields are useless e.g,
+
+// type master struct{
+// 	Name string
+// 	age int
+// }
+
+// as master isnt exported...so Name is useless even if it is exported
+
+
+func main(){
+// Pascal case
+//only used to export identifiers(when they are on package level only)
+
+// snake_case
+// to name files (use small letters + underscore) e.g, order_service.go  ...no space or hyphen -
+
+	//Name3:="Bazel"  //not exported as it is in func and not on package level
+}
