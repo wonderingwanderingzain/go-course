@@ -3,7 +3,7 @@ package main
 // use small letters to name packages and short & understandable words...... no camel case or _
 
 //var Name string= "Zain"
-// identifiers starting with capital letter are exported and visible to same package and  must be outside func means on package level like this Name. capital letter inside func does nothing
+// identifiers starting with capital letter are exported and visible to other packages as well by importing and  must be outside func means on package level like this Name. capital letter inside func does nothing
 
 // type Employee struct{
 // 	FirstName string
