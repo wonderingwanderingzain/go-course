@@ -1,0 +1,105 @@
+package main
+
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
+
+func main() {
+
+	// generating random number....learn it later
+	source := rand.NewSource(time.Now().UnixNano())
+	random := rand.New(source)
+
+	// Generate a random number between 1 and 100
+	target := random.Intn(100) + 1
+
+	// Welcome message
+	fmt.Println("Welcome to The Guessing Game!")
+	fmt.Println("I have chosen a number between 1 and 100")
+	fmt.Println("Guess what it is?")
+
+	var guess int
+	var tries int = 1 // number on which user guessed correct
+	for {
+
+		fmt.Println("Guess the number : ")
+		fmt.Scanln(&guess)
+
+		// check if guess is correct
+		if guess == target {
+
+			if tries == 1 { // if guessed on 1st try :)
+				fmt.Println("Congratulations! You guessed the correct number! It is ", target, ". And you guessed it on ", tries, "st try 🙃")
+				break
+			}
+
+			fmt.Println("Congratulations! You guessed the correct number! It is ", target, ". And you guessed it in ", tries, " tries 🙃")
+			break
+
+		} else if guess < target {
+			fmt.Println("Low guess......try a higher number")
+		} else {
+			fmt.Println("High guess....try a lower number")
+		}
+
+		tries++
+
+	}
+
+}
+
+// chatgpt did it better with error handling and better random number generation and some improvemnts...understand it
+
+/*
+
+package main
+
+import (
+    "fmt"
+    "math/rand"
+    "time"
+)
+
+func main() {
+
+    rand.Seed(time.Now().UnixNano())
+    target := rand.Intn(100) + 1
+
+    fmt.Println("Welcome to The Guessing Game!")
+    fmt.Println("I have chosen a number between 1 and 100.")
+    fmt.Println("Can you guess it?")
+
+    var guess int
+    tries := 0
+
+    for {
+        tries++
+
+        fmt.Print("Enter your guess: ")
+
+        _, err := fmt.Scanln(&guess)
+        if err != nil {
+            fmt.Println("Please enter a valid number!")
+            continue
+        }
+
+        if guess == target {
+            if tries == 1 {
+                fmt.Printf("Amazing! You got it in %d try! 🎯\n", tries)
+            } else {
+                fmt.Printf("Well done! You got it in %d tries! 🎯\n", tries)
+            }
+            break
+        }
+
+        if guess < target {
+            fmt.Println("Too low! Try higher.")
+        } else {
+            fmt.Println("Too high! Try lower.")
+        }
+    }
+}
+
+*/
