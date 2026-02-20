@@ -1,0 +1,50 @@
+package basics
+
+import "fmt"
+
+func main() {
+
+//....... Simple iteration over a range .............
+
+for i:=0;i<10;i++{
+//for i:=range 10 {} same as above
+fmt.Println(i)
+}
+
+//.......... Iteration over a collection ...........
+
+numbers:=[]int{1,2,3,4,5,6} //do understand following later :|
+for index,value:=range numbers{
+	fmt.Printf("Index: %d, Value: %d\n",index,value)
+}
+
+// .........  continue & break statements .............
+
+for i:=range 10{  // odd numbers that end at 5
+	if(i%2==0){
+		continue
+	}
+	fmt.Println(i)
+	if(i==5){
+		break
+	}
+}
+
+// ............ Pyramid of stars ...............
+
+rows:=5
+for i:=0;i<rows;i++{  //i:=range rows
+	//using inner loop for blank spaces
+	for j:=1;j<rows-i;j++{
+		fmt.Print(" ")
+	}
+
+	//use inner loop to rint stars
+	for k:=1;k<=2*i-1;k++{
+		fmt.Print("*")
+	}
+
+	fmt.Println() //move to next line
+}
+
+}
