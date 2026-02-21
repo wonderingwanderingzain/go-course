@@ -6,19 +6,19 @@ func main() {
 
 	// switch statement practice
 
-	// day := "saturday"
+	day := "saturday"
 
-	// switch day {
-	// case "monday", "tuesday", "wednesday", "thursday", "friday":
-	// 	fmt.Println("Its a weekday")
-	// case "saturday":
-	// 	fmt.Println("Its Saturday 😘")
-	// 	fallthrough //it ignores checking next case condition but will execute next code too
-	// case "sunday":
-	// 	fmt.Println("Its a weekend")
-	// default:
-	// 	fmt.Println("Error")
-	// }
+	switch day {
+	case "monday", "tuesday", "wednesday", "thursday", "friday":
+		fmt.Println("Its a weekday")
+	case "saturday":
+		fmt.Println("Its Saturday 😘")
+		fallthrough //it ignores checking next case condition but will execute next code too
+	case "sunday":
+		fmt.Println("Its a weekend")
+	default:
+		fmt.Println("Error")
+	}
 
 	checkType(23)
 
