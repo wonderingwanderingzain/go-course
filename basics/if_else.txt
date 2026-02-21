@@ -1,0 +1,61 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	/*
+
+		syntax:
+
+		if condition {      //condition needs to be true
+
+		code to be run
+
+		}
+
+	*/
+
+	temp := 28
+
+	if temp < 18 {
+		fmt.Println("It is Cold outside")
+	} else if temp <= 30 {
+		fmt.Println("it is mild outside")
+	} else {
+		fmt.Println("it is hot outside")
+
+	}
+
+	// ... Nested conditions
+
+	num := 17
+
+	if num%2 == 0 {
+		if num%3 == 0 {
+			fmt.Println("Number is divisible by both 2 and 3")
+		} else {
+			fmt.Println("Number is divisible by  2 but not 3")
+		}
+	} else {
+		if num%3 != 0 {
+			fmt.Println("Number is not divisible by both 2 and 3")
+		} else {
+			fmt.Println("Number is divisible by  3 but not 2")
+		}
+
+	}
+
+	// ...... using conditional statements
+
+	number := 30
+
+	if number%2 == 0 && number%3 == 0 {
+		fmt.Println("Number is divisible by both 2 and 3")
+	} else if number%2 == 0 || number%3 == 0 {
+		fmt.Println("Number is either divisible by 2 or 3")
+	} else {
+		fmt.Println("Number is not divisble by 2 or by 3")
+	}
+
+}
