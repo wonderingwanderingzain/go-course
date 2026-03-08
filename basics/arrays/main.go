@@ -39,12 +39,14 @@ func main() {
 	b := a
 	//Arrays are value types...b is copy of a.....modifying b doesnt change a
 	//if u want to modify orignl use * and call with &
+	// * is pointer and it points to address
 	b[0] = 100
 	fmt.Println("without * and &")
 	fmt.Printf("Orignal array is %v\nwhile copied array is %v\n", a, b)
 
 	c := [3]int{10, 20, 30}
-	d := &c
+	var d *[3]int
+	d = &c
 	d[0] = 100
 	fmt.Println("with * and &")
 	fmt.Printf("Orignal array is %v\nwhile copied array is %v\n", c, *d)
@@ -53,4 +55,14 @@ func main() {
 	for _, value := range a {
 		fmt.Println(value)
 	}
+
+	//2D Arrays
+	//used for matrices mostly
+	// Arrays are used rarely and 2D arrays very rarely but still know that they exist
+	var matrix [3][3]int = [3][3]int{
+		{1, 2, 3},
+		{4, 5, 6},
+		{7, 8, 9},
+	}
+	fmt.Println(matrix)
 }
